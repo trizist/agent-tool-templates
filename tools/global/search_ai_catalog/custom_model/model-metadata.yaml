@@ -1,0 +1,13 @@
+name: "[Tool] Search AI Catalog"
+description: |
+  Search datasets from the DataRobot AI catalog matching the search terms.
+
+  NOTE: DataRobot does not do fuzzy matching so if you do not get the exact results you expect, try a more specific search term.
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.micro 

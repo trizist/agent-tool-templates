@@ -1,0 +1,36 @@
+name: "[Tool] Make AutoML Predictions"
+description: |
+  Takes in either a Pandas Dataframe and uses that to request a prediction from the specified DataRobot model.
+
+  Note the argument `columns_to_return_with_predictions`: this will tell the tool to return columns 
+  from the input dataset if you want. Use this to make sure you can interpret the predictions. 
+  For example, you may want to return ID or other identifying columns so you can see which prediction is which. 
+  You can't rely on the index or order of the predictions.    
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.xlarge
+
+runtimeParameterDefinitions:
+  - fieldName: OPENAI_API_KEY
+    type: credential
+    credentialType: api_token
+    description: |-
+      Optional: OpenAI API key to use for making prediction explanations.
+      When using DataRobot deployment, use DataRobot API key instead.
+
+  - fieldName: OPENAI_ENDPOINT
+    type: string
+    description: |-
+      Optional: OpenAI endpoint to use for making prediction explanations.
+      When using DataRobot deployment, use "{datarobot_url}/api/v2/deployments/{deployment_id}"
+
+  - fieldName: OPENAI_API_VERSION
+    type: string
+    description: |-
+      Optional: Azure OpenAI API version to use for making prediction explanations.
+      "2024-08-01-preview" or newer is required for the predictions explanations to work.

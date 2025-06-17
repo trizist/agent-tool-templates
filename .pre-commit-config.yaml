@@ -1,0 +1,16 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+-   repo: local
+    hooks:
+    -   id: ruff-format
+        name: ruff-format
+        entry: ruff format .
+        language: system
+        types: [ python ]
+    -   id: ruff
+        name: ruff-check
+        entry: ruff check --fix-only .
+        language: system
+        types: [python]
+        require_serial: true

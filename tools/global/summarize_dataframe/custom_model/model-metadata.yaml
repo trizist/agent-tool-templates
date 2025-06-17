@@ -1,0 +1,11 @@
+name: "[Tool] Summarize DataFrame"
+description: |
+  Provide a summary of a pandas dataframe in a Markdown format.
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.xlarge 

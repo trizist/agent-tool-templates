@@ -1,0 +1,13 @@
+name: "[Tool] Make Text Generation Predictions"
+description: |
+  Takes in a string and requests a prediction from the specified DataRobot text generation model (LLM).
+
+  NOTE: This tool should ONLY be used for TextGeneration deployments and not for regression, classification or other.
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.micro 

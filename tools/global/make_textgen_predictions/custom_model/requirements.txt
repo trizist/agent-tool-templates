@@ -1,0 +1,2 @@
+opentelemetry-instrumentation-requests==0.54b1
+datarobot-predict==1.13.2

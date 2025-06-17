@@ -1,0 +1,16 @@
+name: "[Tool] Render Vega-Lite Chart"
+description: |
+  Returns JSON with a base64-encoded image of a rendered chart from the input Vega-Lite 
+  specification.
+  
+  NOTE: When performing an analysis, you can generate a Vega-Lite chart by simply passing 
+  in the specification in JSON. For the data, you can pass the AI Catalog "dataset_id" as 
+  the dataset. The model will retrieve the data and visualize it.
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.micro 

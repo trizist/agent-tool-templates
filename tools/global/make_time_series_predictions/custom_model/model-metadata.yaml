@@ -1,0 +1,34 @@
+name: "[Tool] Make Time Series Predictions"
+description: |
+  Make forecasts from a time series model.
+
+  Prior to using this tool, verify that you have all the data needed. Time Series models require 
+  a forecast point. They also have specific requirements for the input data.
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.xlarge
+
+runtimeParameterDefinitions:
+  - fieldName: OPENAI_API_KEY
+    type: credential
+    credentialType: api_token
+    description: |-
+      Optional: OpenAI API key to use for making prediction explanations.
+      When using DataRobot deployment, use DataRobot API key instead.
+
+  - fieldName: OPENAI_ENDPOINT
+    type: string
+    description: |-
+      Optional: OpenAI endpoint to use for making prediction explanations.
+      When using DataRobot deployment, use "{datarobot_url}/api/v2/deployments/{deployment_id}"
+
+  - fieldName: OPENAI_API_VERSION
+    type: string
+    description: |-
+      Optional: Azure OpenAI API version to use for making prediction explanations.
+      "2024-08-01-preview" or newer is required for the predictions explanations to work. 

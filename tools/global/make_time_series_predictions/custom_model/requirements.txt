@@ -1,0 +1,11 @@
+aiohttp==3.11.12
+datarobot-predict==1.13.2
+datarobotx==0.2.0
+httpx==0.28.1
+openai==1.63.2
+opentelemetry-instrumentation-aiohttp-client==0.54b1
+opentelemetry-instrumentation-openai==0.40.7
+opentelemetry-instrumentation-requests==0.54b1
+plotly==5.18.0
+statsmodels==0.14.4
+tabulate==0.9.0

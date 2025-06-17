@@ -1,0 +1,17 @@
+name: "[Tool] Render Plotly Chart"
+description: |
+  Returns a JSON object containing a Plotly chart, generated based on the provided specification 
+  and dataset ID.
+  
+  NOTE: When generating the Plotly chart, placeholders in the specification—marked with 
+  double curly braces enclosing a column name (e.g., `{{column_name}}`) — will be replaced 
+  with the corresponding values from the specified column in the AI Catalog dataset. 
+  The dataset is identified by the `dataset_id` input parameter.
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.micro 

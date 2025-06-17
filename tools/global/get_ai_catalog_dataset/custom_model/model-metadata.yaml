@@ -1,0 +1,11 @@
+name: "[Tool] Get AI Catalog Dataset"
+description: |
+  Fetches a dataset from the DataRobot AI Catalog.
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.xlarge 
