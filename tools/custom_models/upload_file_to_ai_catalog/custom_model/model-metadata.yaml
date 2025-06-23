@@ -1,0 +1,34 @@
+name: "[Tool] Upload File to AI Catalog"
+description: |
+  Uploads a file to the AI Catalog.
+
+  The file can be provider either as a file_path or a pandas dataframe.
+
+
+type: inference
+environmentID: 64d2ba178dd3f0b1fa2162f0
+targetType: unstructured
+inferenceModel:
+  targetName: target
+
+# suggestedResourceBundleID: cpu.xlarge
+
+runtimeParameterDefinitions:
+  - fieldName: FILE_STORAGE_BACKEND
+    type: string
+    description: |-
+      File storage backend to use when referring to the file by name.
+      By default, only "s3" is supported.
+
+  - fieldName: S3_BUCKET_NAME
+    type: string
+    description: |-
+      Optional: S3 bucket name to use when referring to the file by name.
+      Used when FILE_STORAGE_BACKEND is "s3".
+
+  - fieldName: S3_CREDENTIALS
+    type: credential
+    credentialType: s3
+    description: |-
+      Optional: S3 credentials to use when referring to the file by name.
+      Used when FILE_STORAGE_BACKEND is "s3".
