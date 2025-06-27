@@ -1,1 +1,2 @@
 opentelemetry-instrumentation-requests==0.54b1
+pyarrow==20.0.0
