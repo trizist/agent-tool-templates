@@ -13,4 +13,4 @@ targetType: unstructured
 inferenceModel:
   targetName: target
 
-# suggestedResourceBundleID: cpu.micro 
+# suggestedResourceBundleID: cpu.xlarge
